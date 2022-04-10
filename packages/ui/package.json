@@ -20,6 +20,7 @@
     "vitest": "^0.9.2"
   },
   "dependencies": {
-    "vue": "^3.2.31"
+    "vue": "^3.2.31",
+    "@yanyu-fe/utils": "workspace:^"
   }
 }
