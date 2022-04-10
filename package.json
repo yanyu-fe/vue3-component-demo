@@ -1,0 +1,35 @@
+{
+  "name": "vue3-component-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanyu-fe/vue3-component-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanyu-fe/vue3-component-demo/issues"
+  },
+  "homepage": "https://github.com/yanyu-fe/vue3-component-demo#readme",
+  "devDependencies": {
+    "@mistjs/eslint-config-vue": "^0.0.2",
+    "@types/jsdom": "^16.2.14",
+    "@vitejs/plugin-vue-jsx": "^1.3.9",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "@vue/tsconfig": "^0.1.3",
+    "eslint": "^8.13.0",
+    "jsdom": "^19.0.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.1",
+    "vitest": "^0.9.2"
+  },
+  "dependencies": {
+    "vue": "^3.2.31"
+  }
+}
