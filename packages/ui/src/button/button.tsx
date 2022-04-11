@@ -1,9 +1,9 @@
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'YButton',
-  setup() {
+  setup(_props, { slots }) {
     return () => {
-      return <button>hello</button>
+      return <button>{ slots.default && slots.default() }</button>
     }
   },
 })

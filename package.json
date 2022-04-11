@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "site": "pnpm dev --filter=site",
+    "site:build": "pnpm build --filter=site"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,10 @@
   },
   "dependencies": {
     "vue": "^3.2.31"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["webpack"]
+    }
   }
 }
