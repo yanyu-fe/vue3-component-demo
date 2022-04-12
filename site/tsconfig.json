@@ -13,9 +13,9 @@
       "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
       "skipLibCheck": true,
       "baseUrl": ".",
-    "paths": {
-      "ui-design": ["../packages/ui/src"],
-    }
+      "paths": {
+        "ui-design": ["../packages/ui/src/index.ts"],
+      }
   },
   "exclude": ["node_modules"]
 }
