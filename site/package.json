@@ -2,14 +2,14 @@
   "name": "site",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "vuepress": "^2.0.0-beta.39"
   },

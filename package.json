@@ -2,26 +2,22 @@
   "name": "vue3-component-demo",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanyu-fe/vue3-component-demo.git"
+  },
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
     "site": "pnpm dev --filter=site",
     "site:build": "pnpm build --filter=site"
   },
-  "lint-staged": {
-    "*.{ts,tsx,less,vue}": "eslint . --fix"
+  "dependencies": {
+    "vue": "^3.2.31"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yanyu-fe/vue3-component-demo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yanyu-fe/vue3-component-demo/issues"
-  },
-  "homepage": "https://github.com/yanyu-fe/vue3-component-demo#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-angular": "^16.2.3",
@@ -37,9 +33,13 @@
     "vite": "^2.9.1",
     "vitest": "^0.9.2"
   },
-  "dependencies": {
-    "vue": "^3.2.31"
+  "lint-staged": {
+    "*.{ts,tsx,less,vue}": "eslint . --fix"
   },
+  "bugs": {
+    "url": "https://github.com/yanyu-fe/vue3-component-demo/issues"
+  },
+  "homepage": "https://github.com/yanyu-fe/vue3-component-demo#readme",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
