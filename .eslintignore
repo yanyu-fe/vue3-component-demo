@@ -1,3 +1,5 @@
 packages/ui/lib
 packages/ui/es
 dist
+
+.commitlintrc.js
