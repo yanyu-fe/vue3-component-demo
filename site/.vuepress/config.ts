@@ -1,13 +1,13 @@
-import { defineUserConfig } from "vuepress";
-import type { DefaultThemeOptions, ViteBundlerOptions } from "vuepress";
+import { defineUserConfig,defaultTheme,viteBundler } from "vuepress";
 import * as navbar from "./configs/navbar";
 import * as sidebar from "./configs/sidebar";
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import codeBlockPlugin  from "@yanyu-fe/vuepress-plugin-code-block"
 import { resolve } from "path";
 
-export default defineUserConfig<DefaultThemeOptions,ViteBundlerOptions>({
+export default defineUserConfig({
     title:"前端组件库",
-    plugins: [['@yanyu-fe/vuepress-plugin-code-block', {}]],
+    plugins: [codeBlockPlugin({})],
     locales:{
         "/":{
             lang:"zh-CN",
@@ -15,15 +15,15 @@ export default defineUserConfig<DefaultThemeOptions,ViteBundlerOptions>({
         }
     },
     lang:"zh-CN",
-    themeConfig:{
+    theme:defaultTheme({
         locales:{
             "/":{
                 navbar:navbar.zh,
                 sidebar:sidebar.zh
             }
         }
-    },
-    bundlerConfig:{
+    }),
+    bundler:viteBundler({
         viteOptions:{
             plugins:[vueJsx()],
             resolve:{
@@ -32,5 +32,5 @@ export default defineUserConfig<DefaultThemeOptions,ViteBundlerOptions>({
                 }
             }
         }
-    }
+    })
 })
