@@ -1,8 +1,7 @@
 on:
   push:
     tags:
-      - "site*"
-
+      - 'site*'
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -11,6 +10,13 @@ jobs:
       - uses: pnpm/action-setup@v2.2.1
       - uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
+          node-version: 16.x
           cache: pnpm
-
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm site:build
+      - uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: site/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
