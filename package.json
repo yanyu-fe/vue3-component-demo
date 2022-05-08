@@ -1,6 +1,7 @@
 {
   "name": "vue3-component-demo",
   "version": "1.0.0",
+  "packageManager": "pnpm@7.0.0",
   "description": "",
   "keywords": [],
   "license": "ISC",
@@ -15,7 +16,6 @@
     "site": "pnpm --filter=site dev",
     "site:build": "pnpm --filter=site build"
   },
-  "packageManager": "pnpm@7.0.0",
   "dependencies": {
     "vue": "^3.2.33"
   },
