@@ -19,5 +19,5 @@ refactor: 重构
 
 ci: 持续集成,自动部署
 
+wx: aibayanyu2022
 
-aibayanyu2022
