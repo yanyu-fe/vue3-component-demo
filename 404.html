@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.43">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>ui-design</title><meta name="description" content="">
+    <link rel="modulepreload" href="/vue3-component-demo/assets/app.1e4a4a2c.js"><link rel="modulepreload" href="/vue3-component-demo/assets/404.html.f6d6deeb.js"><link rel="modulepreload" href="/vue3-component-demo/assets/404.html.31292b39.js"><link rel="prefetch" href="/vue3-component-demo/assets/index.html.0ddab29c.js"><link rel="prefetch" href="/vue3-component-demo/assets/index.html.67513db4.js"><link rel="prefetch" href="/vue3-component-demo/assets/index.html.cfe12843.js"><link rel="prefetch" href="/vue3-component-demo/assets/index.html.bd96538d.js"><link rel="prefetch" href="/vue3-component-demo/assets/index.html.598a6a40.js"><link rel="prefetch" href="/vue3-component-demo/assets/index.html.58c48a06.js"><link rel="prefetch" href="/vue3-component-demo/assets/404.546d2b0d.js"><link rel="prefetch" href="/vue3-component-demo/assets/Layout.b2b043d3.js">
+    <link rel="stylesheet" href="/vue3-component-demo/assets/style.047694cd.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><div class="theme-default-content"><h1>404</h1><blockquote>That&#39;s a Four-Oh-Four.</blockquote><a href="/vue3-component-demo/" class="">Take me home</a></div></div><!----><!--]--></div>
+    <script type="module" src="/vue3-component-demo/assets/app.1e4a4a2c.js" defer></script>
+  </body>
+</html>
