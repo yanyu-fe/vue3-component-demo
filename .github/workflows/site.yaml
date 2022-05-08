@@ -1,17 +1,20 @@
+name: site
 on:
   push:
     tags:
-      - 'site*'
+      - site*
+
 jobs:
-  release:
+  site:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2.2.1
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-          cache: pnpm
+          node-version: 16
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm site:build
       - uses: crazy-max/ghaction-github-pages@v2
