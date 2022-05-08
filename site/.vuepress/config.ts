@@ -7,6 +7,7 @@ import { resolve } from "path";
 
 export default defineUserConfig({
     title:"前端组件库",
+    base:process.env.NODE_ENV === 'development' ? '/' :"/vue3-component-demo/",
     plugins: [codeBlockPlugin({})],
     locales:{
         "/":{
