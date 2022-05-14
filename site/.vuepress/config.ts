@@ -4,7 +4,6 @@ import * as sidebar from "./configs/sidebar";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import { codeBlockPlugin } from "@yanyu-fe/vuepress-plugin-code-block"
 import { resolve } from "path";
-
 export default defineUserConfig({
     title:"前端组件库",
     base: process.env.NODE_ENV === "production" ? "/vue3-component-demo/" : "/",
@@ -34,7 +33,16 @@ export default defineUserConfig({
                     "ui-design/style":resolve(__dirname,"../../packages/ui/src/style.ts"),
                     "ui-design":resolve(__dirname,"../../packages/ui/src/index.ts"),
                 }
+            },
+            css:{
+                preprocessorOptions:{
+                    less:{
+                     modifyVars:{
+                         "html-dark-selector": "~'html.dark'"
+                     }
+                    }
+                }
             }
-        }
+        },
     })
 })
