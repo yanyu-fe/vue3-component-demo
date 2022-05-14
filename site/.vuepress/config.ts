@@ -7,7 +7,7 @@ import { resolve } from "path";
 
 export default defineUserConfig({
     title:"前端组件库",
-    base: process.env.NODE_ENV==="production"? "/vue3-component-demo/" : "/",
+    base: process.env.NODE_ENV === "production" ? "/vue3-component-demo/" : "/",
     plugins: [
         codeBlockPlugin()
     ],
@@ -17,12 +17,12 @@ export default defineUserConfig({
             title:"ui-design",
         }
     },
-    lang:"zh-CN",
-    theme:defaultTheme({
-        locales:{
-            "/":{
-                navbar:navbar.zh,
-                sidebar:sidebar.zh
+    lang: "zh-CN",
+    theme: defaultTheme({
+        locales: {
+            "/": {
+                navbar: navbar.zh,
+                sidebar: sidebar.zh
             }
         }
     }),
