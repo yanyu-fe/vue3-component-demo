@@ -1,0 +1,9 @@
+@import "colors";
+@ui-prefix: ~"ui";
+@html-selector: html;
+
+@{html-selector}{
+  --@{ui-prefix}-primary-color: @blue-base;
+}
+
+@primary-color: var(~"--@{ui-prefix}-primary-color");

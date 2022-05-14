@@ -1,5 +1,7 @@
 <template>
-  <y-button>Basic</y-button>
+  <y-button type="primary">
+    Basic
+  </y-button>
 </template>
 
 <script lang="ts" setup>

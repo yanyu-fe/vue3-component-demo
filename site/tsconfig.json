@@ -15,6 +15,7 @@
       "baseUrl": ".",
       "paths": {
         "ui-design": ["../packages/ui/src/index.ts"],
+        "ui-design/style": ["../packages/ui/src/style.ts"],
       }
   },
   "exclude": ["node_modules"]

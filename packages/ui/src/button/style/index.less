@@ -1,3 +1,9 @@
-.btn{
-  background: aqua;
+@import "../../style/index.less";
+
+@btn-prefix:~"@{ui-prefix}-btn";
+
+.@{btn-prefix}{
+  &-primary{
+    background: @primary-color;
+  }
 }
