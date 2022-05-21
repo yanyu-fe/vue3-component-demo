@@ -21,8 +21,10 @@ export const bundleLess = async() => {
     const code = await less.render(lessContent, {
       paths: [SRC_DIR, dirname(filePath)],
     })
-    await fs.writeFile(resolve(ES_DIR, lessFile.replace('.less', '.css')), code.css)
-    await fs.writeFile(resolve(LIB_DIR, lessFile.replace('.less', '.css')), code.css)
+    await Promise.all([
+      fs.writeFile(resolve(ES_DIR, lessFile.replace('.less', '.css')), code.css),
+      fs.writeFile(resolve(LIB_DIR, lessFile.replace('.less', '.css')), code.css),
+    ])
   }
 }
 
