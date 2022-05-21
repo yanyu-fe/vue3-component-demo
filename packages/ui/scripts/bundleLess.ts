@@ -6,8 +6,10 @@ import less from 'less'
 import { ES_DIR, LIB_DIR, SRC_DIR } from './tools'
 
 export const bundleLess = async() => {
-  await cpy(`${SRC_DIR}/**/*.less`, ES_DIR)
-  await cpy(`${SRC_DIR}/**/*.less`, LIB_DIR)
+  await Promise.all([
+    cpy(`${SRC_DIR}/**/*.less`, ES_DIR),
+    cpy(`${SRC_DIR}/**/*.less`, LIB_DIR),
+  ])
 
   const lessFiles = await fg('**/index.less', {
     cwd: SRC_DIR,
