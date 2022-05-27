@@ -13,6 +13,14 @@
     "es",
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects":[
+    "es/**/style/**.less",
+    "lib/**/style/**.less",
+    "dist/**.css"
+  ],
   "scripts": {
     "build:comp": "vite build",
     "genColor": "esno scripts/genColor.ts",
