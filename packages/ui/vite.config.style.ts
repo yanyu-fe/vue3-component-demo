@@ -13,7 +13,12 @@ export default defineConfig({
     emptyOutDir: false,
     minify: false,
     rollupOptions: {
-      external: /\.less$/,
+      external: (id) => {
+        if (id.endsWith('.less'))
+          return true
+
+        return false
+      },
       input: files,
       output: [
         // esm
@@ -47,6 +52,8 @@ export default defineConfig({
         const keys = Object.keys(bundle)
         for (const key of keys) {
           const bundler: any = bundle[key]
+          bundler.code = bundler.code.replace('./style/index.less', '../../style/index.less')
+          bundler.code = bundler.code.replace('../../index.less', './index.less')
           this.emitFile({
             type: 'asset',
             fileName: key.replace('index.js', 'css.js'),
