@@ -27,5 +27,8 @@
   },
   "resolutions": {
     "@babel/traverse": "7.17.9"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
